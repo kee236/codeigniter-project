@@ -253,3 +253,11 @@ class PaymentSettings extends CI_Controller {
             } else {
                 $response = array('success' => false, 'message' => 'ไม่พบ ID บัญชีที่ต้องการลบ');
             }
+
+            header('Content-Type: application/json');
+            echo json_encode($response);
+        } else {
+            redirect('payment-settings');
+        }
+    }
+}
