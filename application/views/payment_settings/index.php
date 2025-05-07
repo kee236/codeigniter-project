@@ -1,3 +1,9 @@
+<?php if ($this->session->flashdata('error')) : ?>
+    <div class="alert alert-danger"><?= $this->session->flashdata('error') ?></div>
+<?php endif; ?>
+
+
+
 <?php if (!empty($bank_accounts)) : ?>
     <?php foreach ($bank_accounts as $key => $account) : ?>
         <div class="bank-account row mb-3">
